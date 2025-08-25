@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+
+   flask:
+      build:
+        context: ./flask-app
+      container_name: flask-cont
+      ports:
+        - "5000:5000"
+   nginx:
+      image: nginx
+      container_name: nginx-cont
+      ports:
+         - "8080:80"
+      volumes:
+       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      depends_on:
+         - flask
