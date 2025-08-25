@@ -16,7 +16,7 @@ multi-container-app/
 │   ├── app.py
 │   ├── requirements.txt      # optional, can list flask here instead of Dockerfile
 │   └── templates/
-│       ├── home.html
+│       ├── index.html
 │       └── api.html
 └── nginx/
 ├── default.conf
